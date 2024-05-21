@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Blog-Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gray-200 font-sans antialised">
+    <!-- NavBar -->
+    <nav class="bg-blue-600 p-4 text-white flex justify-between">
+        <div>
+            <h1 class="text-3xl font-bold">AI BLOG GENERATOR</h1>
+        </div>
+        <div>
+            <a href="#" class="text-white hover:underline">Log-out</a>
+        </div>
+    </nav>
+    <!-- Main -->
+    <div class="mt-10 flex-grow container mx-auto mt-10 px-4 sm:px-0">
+        <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg 
+        shadow-md hover:shadow-lg shadow-blue-200 hover:shadow-blue-300
+        flex flex-col">
+            <!-- Introduction -->
+            <div class="text-center">
+                <h2 class="text-2xl font-semibold mb-4">
+                    Welcome to the AI Blog Generator
+                </h2>
+                <p class="text-slate-700">
+                    Generate High-Quality article from Youtube videos using AI.
+                    Just copy paste and get the Articles for your projects.
+                </p>
+            </div>
+            
+            <!-- Youtube Section -->
+                <div class="mt-10">
+                <h2 class="text-xl mb-4 font-semibold">Enter Youtube Link</h2>
+                    <div class="flex space-x-4">
+                        <input  id="youtubeLink" type="url" placeholder="Paste Youtube Link..."
+                        class="flex-grow p-2 border border-blue-300 rounded-md"/>
+                        <button id="generateBlogButton" class="bg-blue-200 p-2 rounded-md
+                        hover:-translate-y-1">
+                            Action
+                        </button> 
+                    </div>
+            </div>
+            <!-- Generated Blog -->
+            <section class="mt-9 flex-grow">
+                <h2 class="text-lg  mb-4 font-semibold">Generated Blog Article</h2>
+                <div id="blogContent" class="mt-2 text-amber-500 space-y-4">
+                    <!-- section for loading circle -->
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer>
+        Powered by <a href="https://github.com/DocodeLee">docodeLee</a>
+    </footer>
+</body>
+</html>
