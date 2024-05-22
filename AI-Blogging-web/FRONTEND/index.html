@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI-Blog-Generator</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com" rel="stylesheet"></script>
     <style>
         @keyframes rotate{
             from{
@@ -30,6 +30,18 @@
                 border-radius: 50%;
                 border-right-color: transparent;
                 border-bottom-color: transparent;
+                    
+                -webkit-transition: all 0.5s ease-in;
+                -webkit-animation-name: rotate;
+                -webkit-animation-duration: 1.0s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-timing-function: linear ;
+
+                    transition: all 0.5s ease-in;
+                    animation-name: rotate;
+                    animation-duration: 1.0s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: linear;
             }
     </style>
 </head>
@@ -37,10 +49,13 @@
     <!-- NavBar -->
     <nav class="bg-blue-600 p-4 text-white flex justify-between">
         <div>
-            <h1 class="text-3xl font-bold">AI BLOG GENERATOR</h1>
+            <h1 class=" text-xl md:text-3xl font-bold">AI BLOG GENERATOR</h1>
         </div>
-        <div>
-            <a href="#" class="text-white hover:underline">Log-out</a>
+        <div class="flex flex-row  text-sm md:text-md">
+            <a href="#" class="p-2  text-white hover:underlin 
+             text-sm md:text-xl">Log-In</a>
+            <a href="#" class="p-2 text-white hover:underline 
+            text-sm md:text-xl">Sign-Up</a>
         </div>
     </nav>
     <!-- Main -->
@@ -72,7 +87,7 @@
                     </div>
             </div>
             <!-- section for loading circle -->
-            <div id="loading-circle" class="load">
+            <div style="display:none" id="loading-circle" class="load">
 
             </div>
             <!-- Generated Blog -->
